@@ -1,0 +1,35 @@
+CREATE TABLE buylist (id integer Primary KEY, name TEXT,
+size INTEGER,
+quantity INTEGER,
+price INTEGER,
+colors TEXT);
+INSERT INTO buylist VALUES (1, "Graphic Tees", 5, 60, 15, "Pink");
+INSERT INTO buylist VALUES (2, "Pants", 10, 100, 30, "Blue");
+INSERT INTO buylist VALUES (3, "Pants", 10, 95, 25, "Black");
+INSERT INTO buylist VALUES (4, "Jackects", 5, 50, 60, "Grey");
+INSERT INTO buylist VALUES (5, "Shoes", 7, 30, 30, "Black");
+INSERT INTO buylist VALUES (6, "Hoodies", 5, 45, 45, "Rainbow");
+INSERT INTO buylist VALUES (7, "Frames", 3, 10, 5, "Neutrals");
+INSERT INTO buylist VALUES (8, "lipstick", 1, 9, 5, "Skintone");
+INSERT INTO buylist VALUES (9, "Watches", 3, 5, 9, "Black");
+INSERT INTO buylist VALUES (10, "Water Bottle", 2, 5, 10, "Silver");
+INSERT INTO buylist Values (11, "Hats", 1, 5, 5, "Brown");
+INSERT INTO buylist Values (12, "Sunglasses", 1, 15, 15, "Black");
+INSERT INTO buylist Values (13, "Socks",3, 25, 5, "White");
+INSERT INTO buylist Values (14, "Underwear", 5, 50, 10, "Black");
+INSERT INTO buylist Values (15, "Swim Wear", 4, 25, 25, "Neutral");
+SELECT * FROM buylist;
+
+SELECT SUM(quantity) FROM buylist;
+
+SELECT MAX(price) AS most_price FROM buylist;
+
+SELECT * FROM buylist WHERE price > 20;
+
+SELECT * FROM buylist WHERE QUANTITY > 50;
+
+SELECT * FROM buylist WHERE QUANTITY < 15 AND colors = "Black";
+
+SELECT SUM(size) AS total_sizes FROM buylist;
+
+SELECT COUNT(colors) AS colors_reps FROM buylist;
