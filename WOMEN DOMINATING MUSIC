@@ -1,0 +1,34 @@
+/* Create table about the people and what they do here */
+CREATE table Stars (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Artist TEXT,
+    Age INTEGER,
+    State TEXT);
+
+INSERT INTO stars VALUES (1, "Nicki Minaj", 40, "New York");
+INSERT INTO stars VALUES (2, "Miley Cyrus", 30, "Tennessee");
+INSERT INTO stars VALUES (3, "Ariana Grande", 29, "Florida");
+INSERT INTO stars VALUES (4, "Doja Cat", 27, "Los Angels");
+
+CREATE table Genres (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Stars_id INTEGER,
+    Main TEXT,
+    Sub TEXT);
+
+INSERT INTO Genres VALUES (1, 1, "Rap", "Hip Hop");
+INSERT INTO Genres VALUES (2, 2, "Pop", "Experimental");
+INSERT INTO Genres VALUES (3, 3, "Pop", "R_B");
+INSERT INTO Genres VALUES (4, 4, "Hip Hop", "R_B");
+
+CREATE table Songs (id INTEGER PRIMARY KEY,
+    Title TEXT,
+    Year REAL);
+
+INSERT INTO Songs VALUES (1, "Super Freaky Girl", 2022);
+INSERT INTO Songs VALUES (2, "The Climb", 2009);
+INSERT INTO Songs VALUES (3, "Thank You, Next", 2018);
+INSERT INTO Songs VALUES (4, "Say So", 2018);
+SELECT * FROM Stars;
+SELECT * FROM Songs;
+SELECT * FROM Genres;
+
+SELECT 
